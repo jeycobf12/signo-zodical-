@@ -1,18 +1,132 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+/* condicional switch.
+   imprimir los signos zodiacales pidiendo 
+   dia y mes.
+   */
 
-# Other files and folders
-.settings/
+#include <iostream>
+#include <conio.h>
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+using namespace std;
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+int main(){
+    int dia,mes
+    
+    count<<¨ingrese dia: ¨; cin>>dia;
+    count<<¨ingrese mes: ¨; cin>>mes;
+    
+    switch (mes) {
+        case 1:
+            if (dia<21){
+                  count<<¨CAPRICORNIO¨ ;
+            }
+            else{
+               count<<¨ACUARIO¨ ;
+            }
+        BREAK;
+        
+        case 2:
+             if (dia<19){
+                  count<<¨ACUARIO¨ ;
+            }
+            else{
+               count<<¨piscis¨ ;
+            }
+        break;   
+       
+        case 3:
+             if (dia<21){
+                  count<<¨PISCIS¨ ;
+            }
+            else{
+               count<<¨aries¨ ;
+            }
+        break;
+        
+           case 4:
+             if (dia<19){
+                  count<<¨ARIES¨ ;
+            }
+            else{
+               count<<¨Tauro¨ ;
+            }
+        break;   
+        
+        case 5:
+             if (dia<21){
+                  count<<¨Tauro¨ ;
+            }
+            else{
+               count<<¨Geminis¨ ;
+            }
+        break;  
+        
+        case 6:
+             if (dia<21){
+                  count<<¨Geminis¨ ;
+            }
+            else{
+               count<<¨Cancer¨ ;
+            }
+        break;   
+       
+        case 7:
+             if (dia<23){
+                  count<<¨Cancer¨;
+            }
+            else{
+               count<<¨Leo¨;
+            }
+        break;   
+       
+        case 8
+             if (dia<25){
+                  count<<¨Leo¨;
+            }
+            else{
+                  count<<¨virgo¨;
+            }
+        break;   
+       
+       case 9
+            if (dia<24){
+                  count<<¨Virgo¨; 
+            }
+            else{
+               count<<¨libra¨;
+            }
+        break;   
+        
+         case 10
+             if (dia<24){
+                  count<<¨Libra¨;
+            }
+            else{
+               count<<¨Escorpion¨;
+            }
+        break;   
+        
+         case 11
+             if (dia<23){
+                  count<<¨Escorpion¨;
+            }
+            else{
+               count<<¨Sagitario¨; 
+            }
+        break;   
+            
+         case 12
+             if (dia<21){
+                  count<<¨Sagitario¨;
+            }
+            else{
+               count<<¨Capricornio¨;
+            }
+        break;   
+    
+        default: count<<´este mes no existe¨;
+    
+    }
+    
+    
+    getch();
+}
