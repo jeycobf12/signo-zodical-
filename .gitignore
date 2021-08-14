@@ -1,132 +1,48 @@
-/* condicional switch.
-   imprimir los signos zodiacales pidiendo 
-   dia y mes.
-   */
+/* Programa: Signo del zodíaco (Solución 2) */
 
-#include <iostream>
 #include <conio.h>
+#include <stdio.h>
+#include <string.h>
 
-using namespace std;
+int main()
+{
+    int numero;
+    char categoria[7];
 
-int main(){
-    int dia,mes
-    
-    count<<¨ingrese dia: ¨; cin>>dia;
-    count<<¨ingrese mes: ¨; cin>>mes;
-    
-    switch (mes) {
-        case 1:
-            if (dia<21){
-                  count<<¨CAPRICORNIO¨ ;
-            }
-            else{
-               count<<¨ACUARIO¨ ;
-            }
-        BREAK;
-        
-        case 2:
-             if (dia<19){
-                  count<<¨ACUARIO¨ ;
-            }
-            else{
-               count<<¨piscis¨ ;
-            }
-        break;   
-       
-        case 3:
-             if (dia<21){
-                  count<<¨PISCIS¨ ;
-            }
-            else{
-               count<<¨aries¨ ;
-            }
-        break;
-        
-           case 4:
-             if (dia<19){
-                  count<<¨ARIES¨ ;
-            }
-            else{
-               count<<¨Tauro¨ ;
-            }
-        break;   
-        
-        case 5:
-             if (dia<21){
-                  count<<¨Tauro¨ ;
-            }
-            else{
-               count<<¨Geminis¨ ;
-            }
-        break;  
-        
-        case 6:
-             if (dia<21){
-                  count<<¨Geminis¨ ;
-            }
-            else{
-               count<<¨Cancer¨ ;
-            }
-        break;   
-       
-        case 7:
-             if (dia<23){
-                  count<<¨Cancer¨;
-            }
-            else{
-               count<<¨Leo¨;
-            }
-        break;   
-       
-        case 8
-             if (dia<25){
-                  count<<¨Leo¨;
-            }
-            else{
-                  count<<¨virgo¨;
-            }
-        break;   
-       
-       case 9
-            if (dia<24){
-                  count<<¨Virgo¨; 
-            }
-            else{
-               count<<¨libra¨;
-            }
-        break;   
-        
-         case 10
-             if (dia<24){
-                  count<<¨Libra¨;
-            }
-            else{
-               count<<¨Escorpion¨;
-            }
-        break;   
-        
-         case 11
-             if (dia<23){
-                  count<<¨Escorpion¨;
-            }
-            else{
-               count<<¨Sagitario¨; 
-            }
-        break;   
-            
-         case 12
-             if (dia<21){
-                  count<<¨Sagitario¨;
-            }
-            else{
-               count<<¨Capricornio¨;
-            }
-        break;   
-    
-        default: count<<´este mes no existe¨;
-    
+    printf( "\n   Listado de signos del zod%caco:", 161 );
+    printf( "\n\n   1. Aries" );
+    printf( "\n   2. Tauro" );
+    printf( "\n   3. G%cminis", 130 );
+    printf( "\n   4. C%cncer", 160 );
+    printf( "\n   5. Leo" );
+    printf( "\n   6. Virgo" );
+    printf( "\n   7. Libra" );
+    printf( "\n   8. Escorpio" );
+    printf( "\n   9. Sagitario" );
+    printf( "\n   10. Capricornio" );
+    printf( "\n   11. Acuario" );
+    printf( "\n   12. Piscis" );
+    printf( "\n\n   Introduzca n%cmero de signo: ", 163 );
+
+    scanf( "%d", &numero );
+
+    switch ( numero % 4 )
+    {
+        case  1 : strcpy( categoria, "Fuego" );
+                  break;
+        case  2 : strcpy( categoria, "Tierra" );
+                  break;
+        case  3 : strcpy( categoria, "Aire" );
+                  break;
+        case  0 : strcpy( categoria, "Agua" );
     }
-    
-    
-    getch();
+
+    if ( numero >= 1 && numero <= 12 )
+        printf( "\n   Es un signo de %s.", categoria );
+    else
+        printf( "\n   ERROR: %d no est%c asociado a ning%cn signo.", numero, 160, 163 );
+
+    getch(); /* Pausa */
+
+    return 0;
 }
